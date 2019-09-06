@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Git API Assignment</title>
+
+<meta charset='utf-8'>
+<meta http-equiv='x-ua-compatible' content='IE=edge, chrome=1'>
+<meta name=viewport content='width=device-width, initial-scale=1'>
+
+<!--
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
+-->
+
+<link rel='stylesheet' type='text/css' href='css/normalize.css'></link>
+<link rel='stylesheet' type='text/css' href='css/main.css'></link>
+
+
+<!--[if lt IE 9]>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'></script>
+<![endif]-->
+
+<!-- somewhere need to polyfill grid -->
+</head>
+
+<body>
+
+<div id = 'container'>
+<!-- Commits - summary display -->
+  <div id = 'title'>Git API Assignment</div>
+<div id='total'></div>
+  <div id='commits'></div>
+
+</div>
+<!-- Weirdness for a quickie template. -->
+<script id="template-commit" type="text/x-custom-template">
+<article>
+        <div class='id'></div>
+        <div class='name'></div>
+        <div class='email'></div>
+        <div class='user_url_parent'><a class='user_url' target='new'></a></div>
+        <div class='datecreated'></div>
+	<div class='details_button'>
+		<button>Details ...</button>
+	</div>
+	<div class='details'>
+	<div class='leftSide'>
+        	<ul class='everything_else'>
+        		<li><a class='profile_url' target='new'><img class='avatar_url'></img></a></li>
+        		<li>ORG: <a class='org_url'></a></li>
+        		<li>REPO: <a class='repo_url'></a></li>
+        	</ul>
+	</div>
+	<div class='rightiSide'>
+        	<div class='commit_id'></div><br />
+        	<div class='message'></div>
+	</div>
+	</div>
+</article>
+</script>
+<script id="template-commit-header" type="text/x-custom-template">
+<article class='commit-header'>
+        <div class='id'>Commit ID</div>
+        <div class='name'>Name</div>
+        <div class='email'>Email</div>
+        <div class='user_url'>User profile</div>
+        <div class='datecreated'>Date Created</div>
+</article>
+</script>
+  
+<script id="template-commit-0" type="text/x-custom-template">
+<article>
+        <a class='user_url' target='new'><img class='avatar_url'></img></a>
+        <ul>
+        <li class='id'></li>
+        <li class='name'></li>
+        <li class='email'></li>
+        <li>HTML: <a class='html_url' target='new'></a></li>
+        <li class='datecreated'></li>
+        </ul
+</article>
+</script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+  <script src='js/main.js'></script>
+
+</body>
+
+</html>
